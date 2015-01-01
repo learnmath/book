@@ -37,7 +37,7 @@
 \Crefname{paragraph}{\S}{\S}
 
 \addbibresource{1-introduction.bib}
-\addbibresource{2-sets-monoids.bib}
+\addbibresource{2-sets-functions.bib}
 
 
 % Print-friendly links
@@ -103,8 +103,13 @@
 \newpage
 
 
+% TODO: Fix this to use include, rather than input
 \input{1-introduction.ltx}
 \input{2-sets-functions.ltx}
+
+\begin{appendices}
+  \input{a-about-the-book.ltx}
+\end{appendices}
 
 \newpage
 \printbibliography
