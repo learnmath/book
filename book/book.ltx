@@ -1,0 +1,116 @@
+\documentclass[12pt]{book}
+
+\author{
+  \bbrown
+  \agolov
+}
+
+\newcommand{\editors}{
+  \aneditor{Randy Brown}{randy@beingbrown.net}
+  \aneditor{Nick Chambers}{DTSCode@gmail.com}
+  \aneditor{Ng Wei En}{wei2912.supp0rt@gmail.com}
+  \aneditor{Ben Z RF}{benzrf@benzrf.com}
+}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[toc,page]{appendix}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{fontspec}
+\usepackage{mathtools}
+\usepackage{scrextend}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\crefname{chapter}{\S}{\S}
+\crefname{section}{\S}{\S}
+\crefname{subsection}{\S}{\S}
+\crefname{subsubsection}{\S}{\S}
+\crefname{paragraph}{\S}{\S}
+\Crefname{chapter}{\S}{\S}
+\Crefname{section}{\S}{\S}
+\Crefname{subsection}{\S}{\S}
+\Crefname{subsubsection}{\S}{\S}
+\Crefname{paragraph}{\S}{\S}
+
+\addbibresource{1-introduction.bib}
+\addbibresource{2-sets-functions.bib}
+
+
+% Print-friendly links
+\newcommand{\anauthor}[2]{#1 {\href{mailto:#2}{<{#2}>}} \\ }
+\newcommand{\aneditor}[2]{#1 & {\href{mailto:#2}{<{#2}>}} \\ }
+\newcommand{\link}[2]{#2 (\url{#1})}
+
+% Section & Chapter he
+\newcommand{\ch}[1]{\chapter{#1}\label{ch: #1}}
+\newcommand{\s}[1]{\section{#1}\label{s: #1}}
+\renewcommand{\ss}[1]{\subsection{#1}\label{ss: #1}}
+\newcommand{\sss}[1]{\subsubsection{#1}\label{sss: #1}}
+\newcommand{\pg}[2]{\paragraph{#1}\label{pg: #1}}
+
+% Math shortcuts
+\newcommand{\suc}{\mathrm{suc}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\nil}{\varnothing}
+
+% Miscellaneous
+\newcommand{\agolov}{\anauthor{Anton Golov}{jesyspa@gmail.com}}
+\newcommand{\bbrown}{\anauthor{Randy Brown}{randy@beingbrown.net}}
+% \setmainfont{}
+\setlength{\parskip}{2ex}
+
+\title{We Haven't Chosen a Title Yet!}
+\begin{document}
+\maketitle
+
+\newpage
+\topskip0pt
+\vspace*{\fill}
+
+{\footnotesize
+  \begin{center}
+    Copyright © 2014 \bbrown
+  \end{center}
+% \noindent
+  \begin{center}
+    We've not chosen a license yet, either!
+  \end{center}
+}
+\vspace*{\fill}
+\newpage
+\section*{Editors \& Noted Contributors}
+\begin{addmargin}[4em]{2em}
+  \begin{tabular}{l l}
+    \editors
+  \end{tabular}
+
+  \bigskip
+  \noindent
+  In addition to the noted contributors listed above, we would like to formally
+  pay gratitude to all members of the LearnMath community. We would not have
+  been able to create this book were it not for the wonderful community.
+
+\end{addmargin}
+\newpage
+
+\tableofcontents
+\newpage
+
+
+% TODO: Fix this to use include, rather than input
+\input{1-introduction.ltx}
+\input{2-sets-functions.ltx}
+
+\begin{appendices}
+  \input{a-about-the-book.ltx}
+\end{appendices}
+
+\newpage
+\printbibliography
+\end{document}
